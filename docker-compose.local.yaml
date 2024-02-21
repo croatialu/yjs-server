@@ -1,0 +1,9 @@
+version: "3"
+
+services:
+  yjs-server:
+    restart: always
+    container_name: yjs-server
+    build: .
+    ports:
+      - "4444:4444"

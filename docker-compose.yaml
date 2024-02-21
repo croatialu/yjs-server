@@ -1,0 +1,15 @@
+version: "3"
+
+services:
+  yjs-server:
+    restart: always
+    container_name: yjs-server
+    build: .
+    labels:
+      - traefik.http.routers.yjs-server.rule=Host(`yjs-server.example.com`)
+    networks:
+      - normal
+
+networks:
+  normal:
+    external: true
