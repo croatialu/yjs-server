@@ -9,7 +9,7 @@
   "sideEffects": false,
   "scripts": {
     "build": "tsup src/server.ts --clean",
-    "start": "node ./dist/server.cjs",
+    "start": "PORT=4444 node ./dist/server.cjs",
     "dev": "esno watch src/server.ts",
     "lint": "eslint .",
     "test": "vitest",
